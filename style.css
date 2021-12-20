@@ -1,0 +1,192 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Red: hsl(0, 100%, 74%) 
+- Green: hsl(154, 59%, 51%)
+
+### Accent
+
+- Blue: hsl(248, 32%, 49%)
+
+### Neutral
+
+- Dark Blue: hsl(249, 10%, 26%) 
+- Grayish Blue: hsl(246, 25%, 77%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 16px
+
+### Font
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 400, 500, 600, 700
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+	background-color: #ff7a7a;
+	background-image: url(images/bg-intro-desktop.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.main {
+	margin-top: 6.8rem;
+	display: flex;
+	align-items: center;
+}
+.container {
+	width: 800px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin: 0 auto;
+}
+.container-box-text {
+	display: flex;
+	align-items: center;
+}
+.title {
+	font-weight: 700;
+	color: #fff;
+	font-size: 3.6rem;
+}
+.text {
+	color: #fff;
+	font-weight: 600;
+	font-size: 1.2rem;
+	line-height: 1.8;
+}
+.try {
+	display: block;
+	background-color: #6055a5;
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.2rem;
+	padding: 1.2rem;
+	text-align: center;
+	border-radius: 0.8rem;
+	box-shadow: 0 5px 0 rgba(96, 85, 165, 0.322);
+}
+.try span {
+	font-weight: 600;
+}
+.box-form {
+	margin-top: 2.4rem;
+	background-color: #fff;
+	border-radius: 0.8rem;
+	box-shadow: 0 5px 0 rgba(62, 60, 73, 0.315);
+}
+.form {
+	display: flex;
+	flex-direction: column;
+	padding: 2.4rem;
+	gap: 2.4rem;
+}
+.terms {
+	text-align: center;
+	padding-bottom: 3.6rem;
+	color: #b9b6d3;
+	font-size: 0.8rem;
+}
+.terms a {
+	color: #ff7a7a;
+	font-weight: 600;
+	text-decoration: none;
+}
+.container-input {
+	position: relative;
+}
+.input {
+	border: 1px solid #b9b6d3;
+	padding: 1.2rem 1.6rem;
+	border-radius: 0.4rem;
+	color: #3e3c49;
+	font-weight: 700;
+	font-family: inherit;
+	width: 100%;
+}
+.input:focus {
+	outline: 1px solid #3e3c49;
+}
+.input::placeholder {
+	font-weight: 600;
+}
+.submit {
+	background-color: #38cc8c;
+	color: #fff;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 1.2rem;
+	transition: background-color 0.2s;
+	cursor: pointer;
+}
+.submit:hover {
+	background-color: rgba(56, 204, 140, 0.75);
+}
+/* Effects with CSS & Javascript */
+.icon-error,
+.container-input::after {
+	position: absolute;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.3s;
+}
+.icon-error {
+	width: 2.4rem;
+	height: 2.4rem;
+	right: 1rem;
+	top: 25%;
+}
+.container-input::after {
+	content: attr(title);
+	color: #ff7a7a;
+	font-weight: 400;
+	bottom: 0;
+	right: 0;
+	transform: translateY(100%);
+	font-size: 0.8rem;
+}
+.error.container-input::after,
+.error .icon-error {
+	visibility: visible;
+	opacity: 1;
+}
+@media (max-width: 41em) {
+	body {
+		background-image: url(images/bg-intro-mobile.png);
+	}
+	.main {
+		margin-top: 2.4rem;
+	}
+	.container {
+		grid-template-columns: 1fr;
+	}
+	.box-text {
+		text-align: center;
+	}
+	.container-box-form {
+		margin: 2.4rem;
+	}
+}
